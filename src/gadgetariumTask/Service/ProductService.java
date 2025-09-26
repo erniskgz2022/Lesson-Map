@@ -1,5 +1,6 @@
 package gadgetariumTask.Service;
 
+import gadgetariumTask.enums.Category;
 import gadgetariumTask.enums.KeyCharacter;
 import gadgetariumTask.models.Product;
 

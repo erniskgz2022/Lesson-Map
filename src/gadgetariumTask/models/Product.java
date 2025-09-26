@@ -1,5 +1,6 @@
 package gadgetariumTask.models;
 
+import gadgetariumTask.db.GenerateId;
 import gadgetariumTask.enums.Category;
 import gadgetariumTask.enums.KeyCharacter;
 
@@ -17,8 +18,14 @@ public class Product {
     public Product() {
     }
 
-    public Product(Long id, String name, Category category, List<Map<KeyCharacter, String>> characters, Double price) {
-        this.id = id;
+    public Product( String name, Category category,  Double price) {
+        this.name = name;
+        this.category = category;
+        this.price = price;
+    }
+
+    public Product( String name, Category category, List<Map<KeyCharacter, String>> characters, Double price) {
+        this.id = GenerateId.genProductId();
         this.name = name;
         this.category = category;
         this.characters = characters;
